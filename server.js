@@ -5,6 +5,7 @@ this for creating server with Node Js
 */
 
 var http = require("http");
+function startServer(){
 // module require for creating server
 var server = http.createServer(function(request,response){
 		response.writeHead(200 ,{"content-type":"text/html"});
@@ -14,3 +15,5 @@ var server = http.createServer(function(request,response){
 });
 server.listen(5000);
 console.log("Server is now listen on http://localhost:5000");
+}
+exports.start = startServer;
